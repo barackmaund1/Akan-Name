@@ -7,10 +7,23 @@
     <script src="day.js"></script>
 </head>
 <body>
-    <form>
-        <label>Day of birth</label>
-        <input type="text" id="birth" placeholder="day of birth">
-        
+    <form> 
+        <fieldset>
+          <label for="dayofbirth">Day of birth</label><br>
+          <input type="text" id="birth" placeholder="birth in numbers"><br>
+          <label for="gender" id="gender">Gender</label><br>
+          <input type="radio"  name="gender" value="male">Male
+          <input type="radio" name="gender" value="female">female
+          <label for="month">Month of birth</label><br>
+          <input type="text" id="month" placeholder="month in numbers"><br>
+          <label>Year of birth</label><br>
+          <input type="text" id="year" placeholder="year in numbers"><br>
+          <labeL>Century you are born</labeL><br>
+          <input type="text" id="century" placeholder="Century in numbers"><br>
+          <label>Submit</label><br>
+          <input type="submit" onclick="myFunction()"><br>
+        </fieldset>
+        <p id="view"></p>
     </form>
 </body>
 </html>
