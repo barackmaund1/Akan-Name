@@ -26,7 +26,7 @@ function myFunction() {
   //     alert("invalid year");
   // }
   else if (male.checked === true) {
-    alert(himaleNames[dayOfWeek] + daysOfWeek[dayOfWeek])
+    alert(maleNames[dayOfWeek] + daysOfWeek[dayOfWeek])
   } else if (female.checked === true) {
     document.getElementById("view").innerHTML = (femaleNames[dayOfWeek] + daysOfWeek[dayOfWeek])
   }
