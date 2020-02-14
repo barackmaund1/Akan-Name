@@ -10,18 +10,30 @@
   <script src="day.js"></script>
 </head>
 <body>
-    <form>
+    <div class="container">
+        
+    </div>
+    <form name="myForm" action="index.html" onsubmit="return false" method="POST">
         <div class="form-group">
             <label for="dayofbirth">Day of birth</label>
-            <input type="text" id="birth" placeholder="birth in numbers">
+            <input type="text" id="day" placeholder="birth in numbers">
         </div>
         <div class="form-group">
-              <div>
-                 <label for="gender">Gender</label>
-                 <input type="radio" id="gender" name="gender" value="male">Male
-                 <input type="radio"  id="gender"  name="gender" value="female">female
-            </div>
+            <label>gender</label>
+              <div class="radio">
+               <label> <input type="radio" id="male" name="gender" value="male" required>male</label> 
+              </div>
+              <div class="radio">
+                <label><input type="radio" id="female"  name="gender" >female</label> 
+              </div>
         </div>
+        <div class="form-group">
+            <div>
+               <label for="century">century</label><br>
+               <input type="type" id="century" name=century >
+          
+          </div>
+      </div>
         <div class="form-group"> 
             <label for="month">Month of birth</label>
             <input type="text" id="month"   placeholder="month in numbers">
@@ -30,15 +42,11 @@
             <label>Year of birth</label>
             <input type="text" id="year"  placeholder="year in numbers">
         </div>
-        <div class="form-group">
-            <labeL>Century you are born</labeL>
-            <input type="text" id="century"  placeholder="Century in numbers">
-            </div>
+       
         </div>
         <div class="form-group">
-            <label>Submit</label>
             
-            <input type="submit" onclick="myFunction()">
+            <input type="submit" class="btn btn-outline-info btn-lg" onclick= "myFunction()">
             </div>
         </div>
         <button type="reset" class="btn btn-outline-info btn-lg">Reset</button>
