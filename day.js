@@ -1,13 +1,13 @@
 function myFunction(){
 var year=document.getElementById("year").Value;
-var yy=d.getfullyear(year);
+var YY=d.getfullyear(year);
 var day=document.getElementById("day").value;
 var d=newDate(day);
 var DD=d.getDay(day);
 var month=document.getElementById("month").value;
-var MM=d.getMonth(month) +1;
-var century=document.getElementById("century").value;
-var CC=d.getcentury(century);
+var MM=d.getMonth(month);
+var CC=document.getElementById("century").value;
+
 
 var dayOfWeek= parseInt(((CC / 4) - 2 * CC - 1) + ((5 * YY / 4)) + ((26 * (MM + 1) / 10)) + DD) ;
 
@@ -16,8 +16,11 @@ var maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
 var femaleNames = ["Akosua", " Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
 
 var daysOfWeek=["sunday","Monday","Tuesday","Wednesday","Thurday","Friday","Saturday"];
-
-var gender=document.getElementById("gender").checked;
+if (document.getElementById("gender").checked) {
+    var gender = 'male';
+  }
+  else {
+    var gender = 'female';
 
 //validating months and feb month and also years...user should not enter an invalid data if so alert the
 if (MM < 1 || MM > 12 || MM == 2 && DD > 29) {
