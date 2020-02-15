@@ -38,10 +38,10 @@ A formular showing the day of birth as the result being inconsistant
 - JavaSCript;
 
 ## screenshot
-![project screenshot]
+![project screenshot] (./images/Screenshot.png)
 
 ## Github page link
-- View the my project on liv application through 
+- View the my project on live application through https://github.com/barackmaund1/Akan-Name
 
 ## contact infomation
 Fell free to provide your feedback and raise any matter concerning the project through;
