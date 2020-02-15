@@ -10,7 +10,7 @@ function myFunction() {
   var dayOfWeek = parseInt(((CC / 4) - 2 * CC - 1) + ((5 * YY / 4)) + ((26 * (MM + 1) / 10)) + DD) % 7;
   var male = document.getElementById('male')
   var female = document.getElementById("female")
-  // var weekDay=Math.ceil(dayOfWeek)
+  var weekDay=Math.ceil(dayOfWeek)
   var maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
   var femaleNames = ["Akosua", " Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
   var daysOfWeek = ["sunday", "Monday", "Tuesday", "Wednesday", "Thurday", "Friday", "Saturday"];
@@ -26,11 +26,13 @@ function myFunction() {
   //     alert("invalid year");
   // }
   else if (male.checked === true) {
-    alert(maleNames[dayOfWeek] + daysOfWeek[dayOfWeek])
+    alert(maleNames[weekDay] + daysOfWeek[weekDay])
   } else if (female.checked === true) {
-    document.getElementById("view").innerHTML = (femaleNames[dayOfWeek] + daysOfWeek[dayOfWeek])
+     alert(femaleNames[weekDay] + daysOfWeek[weekDay])
   }
   else {
     alert("Oops!!! Something went wrong! Please try again");
   }
 }
+;
+
