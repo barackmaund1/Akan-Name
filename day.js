@@ -1,14 +1,10 @@
 function myFunction() {
-    var day = parseInt(document.getElementById("day").value);
-    var d = new Date(day);
-    var DD = d.getDate(day);
+    var date = parseInt(document.getElementById("day").value);
     var month =parseInt( document.getElementById("month").value);
-    var MM = d.getMonth(month)+1;
     var year =parseInt( document.getElementById("year").value);
-    var YY = d.getFullYear(year);
-    var CC = parseInt((YY - 1) / 100 + 1);
-    var dayOfWeek = parseInt((((CC / 4) - 2 * CC - 1) + ((5 * YY / 4)) + ((26 * (MM + 1) / 10)) + DD) % 7);
-    // var weekDay=Math.ceil(dayOfWeek);
+    var CC=parseInt((year - 1) / 100 + 1);
+    var dayOfWeek =(((CC / 4) - 2 * CC - 1) + ((5 * year/ 4)) + ((26 * (month+ 1) / 10)) + date) % 7;
+    var weekDay=Math.ceil(dayOfWeek);
 
     var male = document.getElementById("male");
     var female = document.getElementById("female");
@@ -19,20 +15,20 @@ function myFunction() {
   
 
     // validating months and feb month and also years...user should not enter an invalid data if so alert 
-    if (MM < 1 || MM > 12 || MM == 2 && DD > 29) {
+    if (month < 1 || month> 12 || month == 2 && date > 29) {
       alert("Invalid data for the month!! please enter valid month");
     }
      // // validating year
-   else if (YY <= 1699 || YY> 2020) {
+   else if (year <= 1699 || year > 2020) {
        alert("Invalid year!!! Please enter a valid year");
     }
     // else if (yy.toString().length !== 4) {
     //     alert("invalid year");
     // }
     else if (male.checked == true) {
-      alert("Great! your Akan name is"+" "+maleNames[dayOfWeek] +" " +"and you are born on"+" "+ daysOfWeek[dayOfWeek])
+      alert("Great! your Akan name is"+" "+maleNames[weekDay] +" " +"and you are born on"+" "+ daysOfWeek[weekDay])
     } else if (female.checked == true) {
-       alert("Great! your Akan name is"+" "+femaleNames[dayOfWeek] +""+" and you are born on"+" "+ daysOfWeek[dayOfWeek])
+       alert("Great! your Akan name is"+" "+femaleNames[weekDay] +""+" and you are born on"+" "+ daysOfWeek[weekDay])
     }
     else {
       alert("Oops!!! Something went wrong! Please try again");
