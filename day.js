@@ -26,7 +26,7 @@ function myFunction() {
     //     alert("invalid year");
     // }
     else if (male.checked == true) {
-      alert("Great! your Akan name is"+" "+maleNames[weekDay] +" " +"and you are born on"+" "+ daysOfWeek[weekDay])
+      alert("Great! your Akan name is"+" "+maleNames[weekDay] +" " +"and you are born on"+" "+ daysOfWeek[weekDay] )
     } else if (female.checked == true) {
        alert("Great! your Akan name is"+" "+femaleNames[weekDay] +""+" and you are born on"+" "+ daysOfWeek[weekDay])
     }
